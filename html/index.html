@@ -1,0 +1,267 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" type="text/css">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    </head>
+    <body id="body">
+        <div id="inputDiv">
+            <div id="CDDDivType1" style="height: 100%;">
+                <div id="CDDDivType1Left">
+                    <i class="fas fa-cars"></i>
+                </div>
+                <div id="CDDDivType1Right">
+                    <h4>Stock Number</h4>
+                    <input type="text" class="CDDDivType1RightInput" id="CDDDivType1RightInput-StockNum" placeholder="Write here the number that you want to add to stock...">
+                </div>
+            </div>
+            <div id="CDDDivButton" style="height: 35%;" onclick="clFunc('openStockConfirm')"><h4>Submit</h4></div>
+        </div>
+        <div id="confirmDiv">
+            <div id="confirmDivInside">
+                <div style="width: fit-content; height: 13%; position: relative; display: flex; align-items: center; justify-content: center; font-family: AGENCYB; font-size: 1.4vw; color: #29BA99; text-shadow: 0px 0px 20.059px rgba(60, 243, 196, 0.53);">
+                    <h4 id="confirmDivH4">PURCHASE $520.000</h4>
+                </div>
+                <div style="width: 95%; text-align: center; height: fit-content; position: relative; display: flex; align-items: center; justify-content: center; font-family: Gilroy-Regular; font-size: 0.8vw; color: rgba(255, 255, 255, 0.55);">
+                    <span id="confirmSpan">Are you authorizing payment via bank for the purchase of the Enus Jubilee model vehicle for $240,000 dollars? Please confirm with 'Yes' or 'No'.</span>
+                </div>
+                <div id="confirmDivButtons">
+                    <div class="confirmDivButton" id="confirmDivButton1" onclick="clFunc('cancelPurchase')"><div id="confirmDivButtonInside"><h4>No</h4></div></div>
+                    <div class="confirmDivButton" id="confirmDivButton2" onclick="clFunc('confirmPurchase')"><div id="confirmDivButtonInside"><h4>Yes</h4></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="confirmDiv2">
+            <div id="confirmDivInside">
+                <div style="width: fit-content; height: 13%; position: relative; display: flex; align-items: center; justify-content: center; font-family: AGENCYB; font-size: 1.4vw; color: #29BA99; text-shadow: 0px 0px 20.059px rgba(60, 243, 196, 0.53);">
+                    <h4 id="confirmDivH4">SELECT VEHICLE COLOR</h4>
+                </div>
+                <div style="width: 95%; text-align: center; height: fit-content; position: relative; display: flex; align-items: center; justify-content: center; font-family: Gilroy-Regular; font-size: 0.8vw; color: rgba(255, 255, 255, 0.55);">
+                    <span id="confirmSpan">Do you want to select a color for free or you want a random color? Please confirm with 'Yes' or 'No'.</span>
+                </div>
+                <div id="confirmDivButtons">
+                    <div class="confirmDivButton" id="confirmDivButton1" onclick="clFunc('randomColor')"><div id="confirmDivButtonInside"><h4>No</h4></div></div>
+                    <div class="confirmDivButton" id="confirmDivButton2" onclick="clFunc('openChooseColorMenu')"><div id="confirmDivButtonInside"><h4>Yes</h4></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="testDriveDiv">
+            <h4>Time Remaining: <span id="testDriveTimer">00:00</span></h4>
+            <div id="testDriveDivProgbarOut"><div id="testDriveDivProgbarIn"><div id="testDriveDivProgbar"></div></div></div>
+        </div>
+        <div id="mainDiv">
+            <div id="MDEffect"></div>
+            <div id="MDEffect"></div>
+            <div id="mainDivSides" style="justify-content: flex-end; padding-left: 2vw;">
+                <h4 style="font-family: AGENCYB; color: #29BA99;text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74); font-size: 1.3vw;">CAR SPECIFICATIONS</h4>
+                <div id="MDSSpecificationsDiv">
+                    <div id="MDSSpecificationDiv">
+                        <div id="MDSSpecificationDivTop">
+                            <div style="width: 77%; height: 80%; color: #FFF; font-family: Gilroy-Regular; font-size: 0.8vw;"><h4>Acceleration</h4></div>
+                            <div id="MDSSpecificationDivTopRight"><h4 id="MDSSpecificationDivTopRight-acceleration">1.7</h4></div>
+                        </div>
+                        <div id="MDSSpecificationDivBottom">
+                            <div class="MDSSpecificationDivBottomLine" id="MDSSpecificationDivBottomLine-acceleration"></div>
+                            <div id="MDSSpecificationDivBottom2">
+                                <div class="MDSSpecificationDivBottomInside" id="MDSSpecificationDivBottomInside-acceleration"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="MDSSpecificationDiv">
+                        <div id="MDSSpecificationDivTop">
+                            <div style="width: 77%; height: 80%; color: #FFF; font-family: Gilroy-Regular; font-size: 0.8vw;"><h4>Speed</h4></div>
+                            <div id="MDSSpecificationDivTopRight"><h4 id="MDSSpecificationDivTopRight-speed">1.7</h4></div>
+                        </div>
+                        <div id="MDSSpecificationDivBottom">
+                            <div class="MDSSpecificationDivBottomLine" id="MDSSpecificationDivBottomLine-speed"></div>
+                            <div id="MDSSpecificationDivBottom2">
+                                <div class="MDSSpecificationDivBottomInside" id="MDSSpecificationDivBottomInside-speed"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="MDSSpecificationDiv">
+                        <div id="MDSSpecificationDivTop">
+                            <div style="width: 77%; height: 80%; color: #FFF; font-family: Gilroy-Regular; font-size: 0.8vw;"><h4>Braking</h4></div>
+                            <div id="MDSSpecificationDivTopRight"><h4 id="MDSSpecificationDivTopRight-brake">1.7</h4></div>
+                        </div>
+                        <div id="MDSSpecificationDivBottom">
+                            <div class="MDSSpecificationDivBottomLine" id="MDSSpecificationDivBottomLine-brake"></div>
+                            <div id="MDSSpecificationDivBottom2">
+                                <div class="MDSSpecificationDivBottomInside" id="MDSSpecificationDivBottomInside-brake"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="MDSCategoriesDiv">
+                    <div id="MDSCategoriesDivInside"></div>
+                </div>
+            </div>
+            <div id="mainDivCenter"></div>
+            <div id="mainDivSides" style="gap: 1vw; padding-right: 2vw; justify-content: center;">
+                <div id="MDSCarLabelDiv"></div>
+                <div id="MDSCarColorDiv">
+                    <h4>SELECT DEALER COLOR</h4>
+                    <div id="MDSCarColorsDiv">
+                        <!-- 1 -->
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-255" onclick="clFunc('changeVehColor', '255', '255', '255')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-98" onclick="clFunc('changeVehColor', '251', '98', '98')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-68" onclick="clFunc('changeVehColor', '254', '158', '68')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-56" onclick="clFunc('changeVehColor', '255', '202', '56')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-73" onclick="clFunc('changeVehColor', '255', '255', '73')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-52" onclick="clFunc('changeVehColor', '101', '254', '52')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-244" onclick="clFunc('changeVehColor', '67', '255', '244')"></div>
+                        <!-- 2 -->
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-255" onclick="clFunc('changeVehColor', '255', '255', '255')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-98" onclick="clFunc('changeVehColor', '251', '98', '98')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-68" onclick="clFunc('changeVehColor', '254', '158', '68')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-56" onclick="clFunc('changeVehColor', '255', '202', '56')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-73" onclick="clFunc('changeVehColor', '255', '255', '73')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-52" onclick="clFunc('changeVehColor', '101', '254', '52')"></div>
+                        <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-244" onclick="clFunc('changeVehColor', '67', '255', '244')"></div>
+                    </div>
+                </div>
+                <div id="MDSPaymentDiv">
+                    <div id="MDSPaymentDivTop">
+                        <div style="width: 70%; height: 100%; position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; font-family: Gilroy-Regular; gap: 0.2vw;">
+                            <h4 style="color: #29BA99; font-size: 0.9vw; text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);">Payment</h4>
+                            <span style="color: rgba(255, 255, 255, 0.41); font-size: 0.75vw;">Total Price</span>
+                        </div>
+                        <div style="width: 30%; height: 94%; position: relative; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start; font-family: Gilroy-Regular; text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74); font-size: 0.85vw; color: #29BA99;">
+                            <h4 id="vehPrice">$120.000</h4>
+                        </div>
+                    </div>
+                    <div id="MDSPaymentDivBottom">
+                        <div id="MDSPaymentDivBottomTestButton" onclick="clFunc('startTestDrive')">
+                            <div id="MDSPaymentDivBottomTestButtonInside"><h4>Test Drive</h4></div>
+                        </div>
+                        <div id="MDSPaymentDivBottomPayButton1" onclick="clFunc('buyVeh', 'bank')"><span>Pay via Banking Card</span></div>
+                        <div id="MDSPaymentDivBottomPayButton2" onclick="clFunc('buyVeh', 'cash')"><span>Pay via Cash</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainDivBottom">
+                <div id="MDBSearchInputDiv">
+                    <input type="text" id="MDBSearchInput" placeholder="Search">
+                    <img src="files/searchIcon.png" style="width: 0.9vw; margin-left: 0.3vw;">
+                </div>
+                <div id="MDBKeyInfosDiv">
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Exit</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>ESC</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Free Camera</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>Mouse Wheel</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Zoom In</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>E</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Zoom Out</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>Q</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Right</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>D</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Left</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>A</span></div>
+                    </div>
+                    <!-- <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Down</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>S</span></div>
+                    </div>
+                    <div id="MDBKeyInfoDiv">
+                        <div id="MDBKeyInfoDivLeft"><span>Up</span></div>
+                        <div id="MDBKeyInfoDivRight"><span>W</span></div>
+                    </div> -->
+                </div>
+                <div id="mainDivBottom2">
+                    <div id="mainDivBottomSideDiv" onclick="clFunc('scrollLeft')"><i class="far fa-chevron-left"></i></div>
+                    <div id="mainDivBottomCenterDiv"></div>
+                    <div id="mainDivBottomSideDiv" onclick="clFunc('scrollRight')"><i class="far fa-chevron-right"></i></div>
+                </div>
+            </div>
+            <div id="mainDivTop">
+                <div style="width: fit-content; height: 25%; position: relative; display: flex; align-items: center; justify-content: center;"><h4>AUTOMOBILE MARKET</h4></div>
+                <div style="width: fit-content; height: 15%; position: relative; display: flex; align-items: center; justify-content: center;"><span>HERE YOU CAN BUY YOUR OWN CAR FOR NICE PRICE</span></div>
+                <div id="mainDivTopLines">
+                    <div id="mainDivTopLine1"></div>
+                    <div id="mainDivTopLine2"></div>
+                </div>
+            </div>
+        </div>
+        <div id="showroomDiv">
+            <div id="showroomDivCenter">
+                <div id="showroomDivTop">
+                    <div id="showroomDivTopLeft"><h4>SHOWROOM</h4><span>HERE YOU CAN SEE</span></div>
+                    <div id="showroomDivTopInputDiv">
+                        <input type="text" id="showroomDivTopInput" placeholder="Search...">
+                        <img src="files/searchIcon.png" style="width: 0.9vw; margin-left: 0.3vw;">
+                    </div>
+                    <div id="showroomDivTopCloseDiv">
+                        <div id="showroomDivTopCloseDivLeft"><span>Exit</span></div>
+                        <div id="showroomDivTopCloseDivRight"><span>ESC</span></div>
+                    </div>
+                </div>
+                <div id="showroomDivBottom">
+                    <div id="showroomDivBottomLeft"></div>
+                    <div id="showroomDivBottomRight"></div>
+                </div>
+            </div>
+        </div>
+        <div id="sellVehicleDiv">
+            <div id="showroomDivCenter">
+                <div id="showroomDivTop">
+                    <div id="showroomDivTopLeft"><h4>SHOWROOM</h4><span>HERE YOU CAN SEE (RIGHT CLICK TO SELL YOURSELF)</span></div>
+                    <div id="showroomDivTopInputDiv">
+                        <input type="text" id="showroomDivTopInput2" placeholder="Search...">
+                        <img src="files/searchIcon.png" style="width: 0.9vw; margin-left: 0.3vw;">
+                    </div>
+                    <div id="showroomDivTopCloseDiv">
+                        <div id="showroomDivTopCloseDivLeft"><span>Exit</span></div>
+                        <div id="showroomDivTopCloseDivRight"><span>ESC</span></div>
+                    </div>
+                </div>
+                <div id="showroomDivBottom">
+                    <div id="showroomDivBottomLeft2"></div>
+                    <div id="showroomDivBottomRight2"></div>
+                    <div id="showroomDivBottomRight3" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Choose Color Section -->
+        <div id="mainDivSides2" style="display: none; gap: 1vw; justify-content: center; position: absolute; top: 0; bottom: 0; margin: auto; right: 2%;">
+            <div id="MDSCarLabelDiv2">9F</div>
+            <div id="MDSCarColorDiv">
+                <h4>SELECT VEHICLE COLOR</h4>
+                <div id="MDSCarColorsDiv">
+                    <!-- 1 -->
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-255" onclick="clFunc('chooseSellVehColor', '255', '255', '255')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-98" onclick="clFunc('chooseSellVehColor', '251', '98', '98')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-68" onclick="clFunc('chooseSellVehColor', '254', '158', '68')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-56" onclick="clFunc('chooseSellVehColor', '255', '202', '56')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-73" onclick="clFunc('chooseSellVehColor', '255', '255', '73')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-52" onclick="clFunc('chooseSellVehColor', '101', '254', '52')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-244" onclick="clFunc('chooseSellVehColor', '67', '255', '244')"></div>
+                    <!-- 2 -->
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-255" onclick="clFunc('chooseSellVehColor', '255', '255', '255')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-98" onclick="clFunc('chooseSellVehColor', '251', '98', '98')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-68" onclick="clFunc('chooseSellVehColor', '254', '158', '68')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-56" onclick="clFunc('chooseSellVehColor', '255', '202', '56')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-73" onclick="clFunc('chooseSellVehColor', '255', '255', '73')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-52" onclick="clFunc('chooseSellVehColor', '101', '254', '52')"></div>
+                    <div class="MDSCCDColorDiv" id="MDSCCDColorDiv-244" onclick="clFunc('chooseSellVehColor', '67', '255', '244')"></div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

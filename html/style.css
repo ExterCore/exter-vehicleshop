@@ -1,0 +1,1449 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    background-color: transparent !important;
+    /* overflow: hidden; */
+}
+
+@font-face {
+    font-family: AGENCYB;
+    src: url(fonts/AGENCYB.ttf);
+}
+
+@font-face {
+    font-family: AGENCYR;
+    src: url(fonts/AGENCYR.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url(fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url(fonts/Gilroy-SemiBold.ttf);
+}
+
+/* ::-webkit-scrollbar {
+	width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: transparent;
+} */
+
+#mainDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#MDEffect:nth-child(1) {
+    width: 50%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(90deg, #1c202796 50%, #1c202759 100%);
+}
+
+#MDEffect:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(-90deg, #1c202796 50%, #1c202759 100%);
+}
+
+#mainDivSides, #mainDivSides2 {
+    width: 25%;
+    height: 74%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1vw;
+    /* background-color: rgba(0, 0, 0, 0.445); */
+}
+
+#mainDivCenter {
+    width: 45%;
+    height: 75%;
+    position: relative;
+}
+
+#mainDivBottom {
+    width: 97%;
+    height: 22%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.1vw;
+    /* background-color: rgba(255, 0, 0, 0.144); */
+}
+
+#MDBSearchInputDiv {
+    width: 29%;
+    height: 11%;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDBSearchInput {
+    width: 91%;
+    height: 90%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-family: Gilroy-Regular;
+    color: #FFF;
+}
+
+#MDBSearchInput::placeholder {
+    font-family: Gilroy-Regular;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+#MDBKeyInfosDiv {
+    width: 48%;
+    height: 11%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    /* background-color: rgba(255, 0, 0, 0.144); */
+    gap: 0.7vw;
+}
+
+#MDBKeyInfoDiv {
+    width: fit-content;
+    height: 100%;
+    border-radius: 2.083px;
+    border: 1.042px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#MDBKeyInfoDivLeft {
+    width: fit-content;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Gilroy-Regular;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    font-size: 0.65vw;
+}
+
+#MDBKeyInfoDivRight {
+    width: fit-content;
+    height: 100%;
+    border-radius: 0px 1.042px 1.042px 0px;
+    background: rgba(255, 255, 255, 0.06);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.53);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 0.7vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+#mainDivBottom2 {
+    width: 100%;
+    height: 75%;
+    position: relative;
+    /* background-color: rgba(255, 0, 0, 0.144); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#MDSSpecificationsDiv {
+    width: 56%;
+    height: 29%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9vw;
+    padding-top: 0.8vw;
+    /* background-color: rgba(255, 0, 0, 0.281); */
+}
+
+#MDSSpecificationDiv {
+    width: 100%;
+    height: 22%;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: radial-gradient(114.29% 114.29% at 50% 50%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#MDSSpecificationDivTop {
+    width: 90%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+#MDSSpecificationDivTopRight {
+    width: 23%;
+    height: 75%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.28);
+    color: #FFF;
+    font-family: Gilroy-Regular;
+    font-size: 0.7vw;
+}
+
+#MDSSpecificationDivBottom {
+    width: 90%;
+    height: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MDSSpecificationDivBottomLine {
+    width: 2.2%;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 48%;
+    margin: auto;
+    z-index: 2;
+}
+
+#MDSSpecificationDivBottom2 {
+    width: 100%;
+    height: 53%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.MDSSpecificationDivBottomInside {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: #29BA99;
+    box-shadow: 0px 0px 7.3px 0px rgba(93, 224, 177, 0.53);
+}
+
+#MDSCategoriesDiv {
+    width: 59%;
+    height: 59%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* background-color: red; */
+}
+
+#MDSCategoriesDivInside {
+    width: 100%;
+    height: 83%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    gap: 1.1vw;
+}
+
+#MDSCategoriesDivInside::-webkit-scrollbar {
+    width: 0.1vw;
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+#MDSCategoriesDivInside::-webkit-scrollbar-thumb {
+	background: #FFF;
+}
+
+.MDSCategoryDiv {
+    width: 43%;
+    height: 29%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none"><mask id="mask0_816_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><rect width="108" height="108" rx="2" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_816_300)"><rect width="108" height="108" fill="url(%23paint0_radial_816_300)"/><rect x="12" y="-56" width="213" height="213" rx="106.5" fill="white" fill-opacity="0.04"/><rect x="60" y="-38" width="203" height="203" rx="101.5" fill="white" fill-opacity="0.07"/></g><defs><radialGradient id="paint0_radial_816_300" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108 54) rotate(180) scale(123)"><stop stop-color="white" stop-opacity="0.19"/><stop offset="0.747624" stop-color="white" stop-opacity="0.05"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient></defs></svg>');
+    font-family: Gilroy-Regular;
+    color: #FFF;
+    font-size: 0.75vw;
+    gap: 1vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 4px;
+    /* padding-top: 1vw; */
+    border: 1px solid transparent;
+    text-transform: capitalize;
+}
+
+.MDSCategoryDivActive {
+    border: 1px solid #29BA99;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none"><mask id="mask0_816_327" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><rect width="108" height="108" rx="3" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_816_327)"><rect width="108" height="108" fill="url(%23paint0_radial_816_327)"/><rect x="12" y="-56" width="213" height="213" rx="106.5" fill="white" fill-opacity="0.05"/><rect x="60" y="-38" width="203" height="203" rx="101.5" fill="white" fill-opacity="0.03"/></g><defs><radialGradient id="paint0_radial_816_327" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108 54) rotate(180) scale(123)"><stop stop-color="%2329BA99" stop-opacity="0.22"/><stop offset="1" stop-color="%2329BA99" stop-opacity="0.12"/></radialGradient></defs></svg>');
+}
+
+.MDSCategoryDiv:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid #29BA99;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="none"><mask id="mask0_816_327" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="108"><rect width="108" height="108" rx="3" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_816_327)"><rect width="108" height="108" fill="url(%23paint0_radial_816_327)"/><rect x="12" y="-56" width="213" height="213" rx="106.5" fill="white" fill-opacity="0.05"/><rect x="60" y="-38" width="203" height="203" rx="101.5" fill="white" fill-opacity="0.03"/></g><defs><radialGradient id="paint0_radial_816_327" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108 54) rotate(180) scale(123)"><stop stop-color="%2329BA99" stop-opacity="0.22"/><stop offset="1" stop-color="%2329BA99" stop-opacity="0.12"/></radialGradient></defs></svg>');
+}
+
+#mainDivBottomSideDiv {
+    width: 1.7%;
+    height: 99%;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #29BA99;
+    font-size: 0.8vw;
+}
+
+#mainDivBottomCenterDiv {
+    width: 96.6%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.5vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 55;
+}
+
+#mainDivBottomCenterDiv::-webkit-scrollbar {
+	width: 0;
+    height: 0;
+}
+
+#mainDivBottomCenterDiv::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+
+.MDBCDVehicleDiv {
+    width: 18%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: radial-gradient(117.15% 117.15% at 50.15% 0%, rgba(255, 255, 255, 0.31) 0%, rgba(255, 255, 255, 0.00) 100%);
+    gap: 0.8vw;
+    border: 1px solid transparent;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent; */
+}
+
+.MDBCDVehicleDivActive {
+    border: 1px solid #29BA99;
+    background: radial-gradient(109.3% 109.3% at 50% 50%, rgba(23, 109, 90, 0.77) 0%, rgba(23, 109, 90, 0.00) 100%);
+}
+
+.MDBCDVehicleDiv:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid #29BA99;
+    background: radial-gradient(109.3% 109.3% at 50% 50%, rgba(23, 109, 90, 0.77) 0%, rgba(23, 109, 90, 0.00) 100%);
+}
+
+#MDBCDVehicleDivTop {
+    width: 86%;
+    height: 23%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+#MDBCDVehicleDivBottom {
+    width: 86%;
+    height: 23%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: auto;
+}
+
+#MDBCDVehicleDivTopLeftSide {
+    width: fit-content;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: AGENCYB;
+    color: #FFF;
+    font-size: 1vw;
+    line-height: 0.9vw;
+    text-transform: capitalize;
+}
+
+.MDBCDVehicleDivTopRightSide {
+    width: fit-content;
+    height: 55%;
+    background: rgba(0, 0, 0, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy-Regular;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.7vw;
+}
+
+.MDBCDVehicleDivTopRightSide1 {
+    color: rgba(144, 255, 215, 0.77); 
+    text-shadow: 0px 0px 4.8px rgba(144, 255, 215, 0.55);
+    top: 0;
+}
+
+.MDBCDVehicleDivTopRightSide2 {
+    color: rgba(255, 128, 128, 0.77);
+    text-shadow: 0px 0px 4.8px rgba(255, 51, 51, 0.55);
+    top: 0;
+}
+
+.MDBCDVehicleDivTopRightSide-2 {
+    width: fit-content;
+    height: 12%;
+    background: rgba(0, 0, 0, 0.21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy-Regular;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-size: 0.6vw;
+}
+
+.MDBCDVehicleDivTopRightSide-21 {
+    color: rgba(144, 255, 215, 0.77); 
+    text-shadow: 0px 0px 4.8px rgba(144, 255, 215, 0.55);
+}
+
+.MDBCDVehicleDivTopRightSide-22 {
+    color: rgba(255, 128, 128, 0.77);
+    text-shadow: 0px 0px 4.8px rgba(255, 51, 51, 0.55);
+}
+
+#mainDivTop {
+    width: 55%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.4vw;
+    /* background-color: red; */
+}
+
+#mainDivTop h4 {
+    color: #29BA99;
+    text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);
+    font-size: 1.6vw;
+    font-family: AGENCYB;
+}
+
+#mainDivTop span {
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 400;
+    font-size: 0.83vw;
+    font-family: AGENCYR;
+}
+
+#mainDivTopLines {
+    width: 90%;
+    height: 3%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+#mainDivTopLine1 {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    background: radial-gradient(50% 600% at 50% 50%, rgba(255, 255, 255, 0.81) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+#mainDivTopLine2 {
+    width: 26.5%;
+    height: 65%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: #29BA99;
+    border-radius: 2px;  
+}
+
+#MDSCarLabelDiv, #MDSCarLabelDiv2 {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #29BA99;
+    text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);
+    font-family: AGENCYB;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+#MDSCarColorDiv {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    color: #29BA99;
+    text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);
+    font-family: AGENCYB;
+    font-size: 1.5vw;
+    gap: 0.5vw;
+    /* background-color: red; */
+}
+
+#MDSCarColorsDiv {
+    width: 60%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.23vw;
+    /* background-color: red; */
+}
+
+.MDSCCDColorDiv {
+    width: 12%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.MDSCCDColorDivActive {
+    border: 1px solid #29BA99;
+}
+
+.MDSCCDColorDiv:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid #29BA99;
+}
+
+.MDSCCDColorDiv:nth-child(1), .MDSCCDColorDiv:nth-child(8) {
+    background: #FEFFFF;
+}
+
+.MDSCCDColorDiv:nth-child(2), .MDSCCDColorDiv:nth-child(9) {
+    background: #FB6262;
+}
+
+.MDSCCDColorDiv:nth-child(3), .MDSCCDColorDiv:nth-child(10) {
+    background: #FE9E44;
+}
+
+.MDSCCDColorDiv:nth-child(4), .MDSCCDColorDiv:nth-child(11) {
+    background: #FFCA38;
+}
+
+.MDSCCDColorDiv:nth-child(5), .MDSCCDColorDiv:nth-child(12) {
+    background: #FFFF49;
+}
+
+.MDSCCDColorDiv:nth-child(6), .MDSCCDColorDiv:nth-child(13) {
+    background: #65FE34;
+}
+
+.MDSCCDColorDiv:nth-child(7), .MDSCCDColorDiv:nth-child(14) {
+    background: #43FFF4;
+}
+
+#MDSPaymentDiv {
+    width: 100%;
+    height: 22%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.2vw;
+    /* background-color: red; */
+}
+
+#MDSPaymentDivTop {
+    width: 60%;
+    height: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#MDSPaymentDivBottom {
+    width: 60%;
+    height: 45%;
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9vw;
+    /* background-color: red; */
+}
+
+#MDSPaymentDivBottomTestButton {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#MDSPaymentDivBottomTestButtonInside {
+    width: 95%;
+    height: 75%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 210, 160, 0.17);
+    font-family: Gilroy-Regular; 
+    color: #29BA99;
+    text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);
+    font-size: 0.75vw;
+}
+
+#MDSPaymentDivBottomTestButtonInside:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    font-size: 0.85vw;
+}
+
+#MDSPaymentDivBottomPayButton1, #MDSPaymentDivBottomPayButton2 {
+    width: fit-content;
+    height: 40%;
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    background: #17191f;
+    font-family: Gilroy-Regular;
+    font-size: 0.65vw;
+    padding-left: 0.95vw;
+    padding-right: 0.95vw;
+    text-shadow: 0px 0px 19.4px rgba(255, 255, 255, 0.74);
+}
+
+#MDSPaymentDivBottomPayButton1:hover, #MDSPaymentDivBottomPayButton2:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    color: #29BA99;
+    text-shadow: 0px 0px 19.4px rgba(41, 186, 153, 0.74);
+}
+
+#testDriveDiv {
+    width: 14%;
+    height: 6%;
+    border-radius: 2px;
+    background: #0F181E;
+    position: absolute;
+    left: 1%;
+    bottom: 20%;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #29BA99;
+    text-shadow: 0px 0px 12.3px rgba(41, 186, 153, 0.66);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 0.8vw;
+    padding-left: 0.6vw;
+    gap: 0.4vw;
+}
+
+#testDriveDivProgbarOut {
+    width: 96%;
+    height: 25%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#testDriveDivProgbarIn {
+    width: 95%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#testDriveDivProgbar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #29BA99;
+    box-shadow: 0px 0px 13px 0px rgba(41, 186, 153, 0.66);
+}
+
+#confirmDiv, #confirmDiv2 {
+    width: 25%;
+    height: 23%;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 13.372px;
+    background: radial-gradient(201.83% 110.39% at 50% -10.39%, rgba(49, 88, 120, 0.42) 0%, rgba(29, 51, 69, 0.00) 71.08%), rgba(28, 32, 39, 0.90);
+    z-index: 99;
+}
+
+#confirmDivInside {
+    width: 90%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2.006px;
+    border: 0.669px solid rgba(255, 255, 255, 0.13);
+    gap: 0.6vw;
+}
+
+#confirmDivButtons {
+    width: 90%;
+    height: 25%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1vw;
+    /* background-color: red; */
+}
+
+.confirmDivButton {
+    width: 46%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.987px;
+    border: 0.996px solid rgba(255, 255, 255, 0.25);
+}
+
+#confirmDivButtonInside {
+    width: 90%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy-Regular;
+    font-size: 0.8vw;
+}
+
+#confirmDivButtonInside:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    font-size: 0.85vw;
+}
+
+.confirmDivButton:nth-child(1) #confirmDivButtonInside {
+    background: rgba(255, 80, 80, 0.17);
+    color: #FF5050;
+}
+
+.confirmDivButton:nth-child(2) #confirmDivButtonInside {
+    background: rgba(0, 210, 160, 0.17);
+    color: #29BA99;
+}
+
+#showroomDiv, #sellVehicleDiv {
+    width: 43%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    background: rgba(53, 54, 69, 0.90);
+}
+
+#showroomDivCenter {
+    width: 88%;
+    height: 88%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1vw;
+    /* background-color: red; */
+}
+
+#showroomDivTop {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    /* background-color: red; */
+}
+
+#showroomDivTopLeft {
+    width: 35%;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#showroomDivTopLeft h4 {
+    font-family: AGENCYB;
+    color: #11E8BD;
+    text-shadow: 0px 0px 25.954px rgba(93, 224, 177, 0.74);
+    font-size: 1.8vw;
+}
+
+#showroomDivTopLeft span {
+    font-family: AGENCYR;
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.9vw;
+    font-weight: 300;
+}
+
+#showroomDivTopInputDiv {
+    width: 43%;
+    height: 34%;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 1px;
+}
+
+#showroomDivTopInput, #showroomDivTopInput2 {
+    width: 85%;
+    height: 90%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-family: Gilroy-SemiBold;
+    color: #FFF;
+    font-weight: 400;
+}
+
+#showroomDivTopInput::placeholder, #showroomDivTopInput2::placeholder {
+    font-family: Gilroy-SemiBold;
+    color: rgba(255, 255, 255, 0.30);
+    font-weight: 400;
+}
+
+#showroomDivTopCloseDiv {
+    width: fit-content;
+    height: 31%;
+    border-radius: 2px;
+    border: 1px solid #585d6cb9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: Gilroy-Regular;
+}
+
+#showroomDivTopCloseDivLeft {
+    width: fit-content;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.45);
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+    font-size: 0.7vw;
+}
+
+#showroomDivTopCloseDivRight {
+    width: fit-content;
+    height: 100%;
+    border-radius: 0px 2px 2px 0px;
+    background: #585d6cb9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.40);
+    font-size: 0.7vw;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+}
+
+#showroomDivBottom {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#showroomDivBottomLeft, #showroomDivBottomLeft2 {
+    width: 31%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.8vw;
+    /* overflow: hidden; */
+}
+
+.showroomDivBottomLeftDiv {
+    width: 88%;
+    height: 5.5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 3px;
+    background: radial-gradient(131.83% 114.29% at 73.9% 5.95%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%);
+    border: 1px solid transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.53);
+    font-family: Gilroy-SemiBold;
+    font-weight: 500;
+    font-size: 0.8vw;
+    gap: 0.8vw;
+    padding-left: 1.2vw;
+}
+
+.showroomDivBottomLeftDiv i {
+    font-size: 1vw;
+}
+
+.showroomDivBottomLeftDiv:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    color: #11E8BD;
+    border: 1px solid #11E8BD;
+    background: radial-gradient(95.01% 83.33% at 50% 50%, rgba(41, 158, 135, 0.76) 0%, rgba(41, 158, 135, 0.00) 100%);
+}
+
+.showroomDivBottomLeftDivActive {
+    color: #11E8BD;
+    border: 1px solid #11E8BD;
+    background: radial-gradient(95.01% 83.33% at 50% 50%, rgba(41, 158, 135, 0.76) 0%, rgba(41, 158, 135, 0.00) 100%);
+}
+
+#showroomDivBottomRight, #showroomDivBottomRight2, #showroomDivBottomRight3 {
+    width: 65%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.82vw;
+    overflow-y: scroll;
+    /* background-color: rgba(255, 0, 0, 0.212); */
+}
+
+#showroomDivBottomRight::-webkit-scrollbar, #showroomDivBottomRight2::-webkit-scrollbar, #showroomDivBottomRight3::-webkit-scrollbar {
+	width: 0;
+}
+
+#showroomDivBottomRight::-webkit-scrollbar-thumb, #showroomDivBottomRight2::-webkit-scrollbar-thumb, #showroomDivBottomRight3::-webkit-scrollbar-thumb {
+	background: transparent;
+}
+
+#showroomDivBottomRightDiv {
+    width: 31%;
+    height: 25%;
+    position: relative;
+    border-radius: 2px;
+    background: radial-gradient(131.83% 114.29% at 73.9% 5.95%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.showroomDivBottomRightDiv {
+    width: 31%;
+    height: 25%;
+    position: relative;
+    border-radius: 2px;
+    background: radial-gradient(131.83% 114.29% at 73.9% 5.95%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+#showroomDivBottomRightDivTop {
+    width: 100%;
+    height: 86%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#showroomDivBottomRightDivTopTextDiv {
+    width: 80%;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+    font-family: Gilroy-Regular;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+#showroomDivBottomRightDivTop img {
+    margin-top: 1.5vw;
+    width: 5.3vw;
+}
+
+.showroomDivBottomRightDivBottom {
+    width: 98%;
+    height: 14%;
+    position: relative;
+    border-radius: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.00) 162.07%);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-family: Gilroy-Regular;
+    font-weight: 500;
+    gap: 1.7vw;
+    font-size: 0.75vw;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.showroomDivBottomRightDivBottomActive {
+    border: 1px solid rgba(17, 232, 189, 0.81);
+    background: linear-gradient(180deg, rgba(17, 232, 189, 0.51) 0%, rgba(17, 232, 189, 0.00) 220.69%);
+    color: #BFFFF2;
+}
+
+.showroomDivBottomRightDivBottomActive #showroomDivBottomRightDivBottomChevrons {
+    color: #11E8BD;
+}
+
+.showroomDivBottomRightDivBottom:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    border: 1px solid rgba(17, 232, 189, 0.81);
+    background: linear-gradient(180deg, rgba(17, 232, 189, 0.51) 0%, rgba(17, 232, 189, 0.00) 220.69%);
+    color: #BFFFF2;
+}
+
+.showroomDivBottomRightDivBottom:hover #showroomDivBottomRightDivBottomChevrons {
+    color: #11E8BD;
+}
+
+#showroomDivBottomRightDivBottomChevrons {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    /* background-color: red; */
+}
+
+#showroomDivBottomRightDivBottomChevrons i:nth-child(1) {
+    opacity: 0.19;
+}
+
+#showroomDivBottomRightDivBottomChevrons i:nth-child(3) {
+    opacity: 0.19;
+}
+
+#inputDiv {
+    width: 24%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+    background: radial-gradient(98.19% 84.24% at 29.44% -1.3%, #1D3545 0%, rgba(29, 53, 69, 0.00) 100%), #192029;
+    padding: 1vw;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #FFF;
+}
+
+#CDDDivType1 {
+    width: 100%;
+    height: 13%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* background-color: rgba(255, 0, 0, 0.404); */
+    gap: 0.5vw;
+}
+
+#CDDDivType3 {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#CDDDivType1Left {
+    width: 19%;
+    height: 100%;
+    border-radius: 3px;
+    background: radial-gradient(87.66% 87.66% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.00) 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00F7BE;
+    font-size: 1.4vw;
+}
+
+#CDDDivType1Right {
+    width: 81%;
+    height: 63%;
+    border-radius: 3px;
+    background: radial-gradient(87.66% 87.66% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.00) 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.7vw;
+    gap: 0.4vw;
+}
+
+.CDDDivType1RightInput {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 0.75vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+.CDDDivType1RightInput::placeholder {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.CDDDivType1RightInput::-webkit-outer-spin-button,
+.CDDDivType1RightInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#CDDDivType2 {
+    width: 100%;
+    height: 13%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background: radial-gradient(87.66% 87.66% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.00) 100%);
+    font-size: 0.75vw;
+}
+
+#CDDDivType2Inside {
+    width: 93%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+#CDDDivType2DropdownDiv {
+    width: 100%;
+    height: 44%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 247, 190, 0.12);
+    font-size: 0.75vw;
+}
+
+.CDDDivType2DropdownDivInput {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+#CDDDT2DDIconDiv {
+    width: 10%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#CDDDivButton {
+    width: 100%;
+    height: 6%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(32, 132, 109, 0.29);
+    color: #36AE98;
+}
+
+#CDDDivButton:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    color: #FFF;
+    scale: 1.02;
+}
+
+.CDDT2DDIDiv {
+    width: 50%;
+    height: 37%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2px;
+    background: rgba(255, 126, 136, 0.10);
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+}
+
+#CDDT2DDIDivInsideRed {
+    width: 35%;
+    height: 76%;
+    display: flex;
+    position: relative;
+    border-radius: 2px;
+    background: radial-gradient(95.45% 95.45% at 50% 50%, rgba(255, 100, 100, 0.77) 0%, rgba(255, 100, 100, 0.00) 100%);
+}
+
+#CDDT2DDIDivInsideGreen {
+    width: 35%;
+    height: 76%;
+    display: flex;
+    position: relative;
+    border-radius: 2px;
+    background: radial-gradient(95.45% 95.45% at 50% 50%, rgba(32, 132, 109, 0.77) 0%, rgba(32, 132, 109, 0.00) 100%);
+}
+
+.CDDT2DDIDiv:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#CDDDivType2DropdownMain {
+    width: 85.5%;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(9.350000381469727px);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.CDDDivType2DropdownMainInside {
+    width: 100%;
+    /* height: 20%; */
+    padding-top: 0.35vw;
+    padding-bottom: 0.35vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF;
+    padding-left: 1.5vw;
+    font-size: 0.75vw;
+    background: transparent;
+}
+
+.CDDDivType2DropdownMainInsideChoosen {
+    background: rgba(0, 247, 190, 0.13);
+}
+
+.CDDDivType2DropdownMainInside:hover {
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    background: rgba(0, 247, 190, 0.13);
+}
